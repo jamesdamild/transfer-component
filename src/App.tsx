@@ -1,6 +1,6 @@
 import { Button, Col, Divider, Row } from "antd";
 import { PersonsList } from "./components/PersonsList";
-import { persons_can_be_added, persons_can_be_removed } from "./data";
+import { persons_can_be_added, persons_can_be_removed } from "./DataSet2";
 import styled from "styled-components";
 
 function App() {

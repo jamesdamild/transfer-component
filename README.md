@@ -1,12 +1,31 @@
-# Getting Started with Create React App
+# Getting Started with Transfer component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of this exercice, is to create a transfer component.
+
+The initial template has 2 lists, on the right the list of persons that can be added, the one on the left is the list of persons that can be removed. 
+
+Instructions
+-
+- The list on the left should have an "Add" action button. When clicked, the item moves to the list on the right and becomes highlighted with a green background. You can use `#e9efeb` or any other of your choice. 
+- The list on the right should have a "Remove" action button. When clicked, the item moves to the list on the left and becomes highlighted with a red background color. You can use `#fee3e2` or any other of your choice.
+- When searching on either one of the list, the results should be filtered based on the search criterias. Implement the search of your choice. 
+- When clicking on "Reset" button, a confirmation modal should be displayed with a "Cancel" and "Reset" button, if the action is confirmed, the lists should go back to the initial state. 
+- When clicking the save button, the button should start loading and after few seconds, display 2 messages in the console. "Items Added: [...]" and "Items removed: [...]"
+- Optional: Make the component reusable with other types of Data. You can use `DataSet2` to test. 
+
+Hints
+- 
+- You can use external libraries to make a sophisticated search 
+- Use dynamic types to have a safe reusable component
+- Split your components and keep your files focused on one part of the logic. 
+
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +33,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+#### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,18 +43,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

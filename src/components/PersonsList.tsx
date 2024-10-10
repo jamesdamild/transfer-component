@@ -1,4 +1,4 @@
-import { Button, Col, Divider, Row, Typography } from "antd";
+import { Button, Col, Divider, Input, Row, Typography } from "antd";
 
 // Types and components can be adjusted at will
 export const PersonsList = ({
@@ -12,6 +12,7 @@ export const PersonsList = ({
     <div>
       <Typography.Title level={2}>{title}</Typography.Title>
       <Divider />
+      <Input.Search placeholder="Search by name" size="large" />
       {persons.map((person: any) => (
         <Row justify="space-between" align="middle">
           <Col flex="1">
