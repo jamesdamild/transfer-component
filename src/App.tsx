@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Button, Col, Divider, Row } from "antd";
+import { PersonsList } from "./components/PersonsList";
+import { persons_can_be_added, persons_can_be_removed } from "./data";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledContainer>
+      <Row gutter={16}>
+        <Col span={12}>
+          <PersonsList title="Can be Added" persons={persons_can_be_added} />
+        </Col>
+        <Col span={12}>
+          <PersonsList
+            title="Can be Removed"
+            persons={persons_can_be_removed}
+          />
+        </Col>
+      </Row>
+      <Divider />
+      <Row justify="end" gutter={8}>
+        {/* Action buttons */}
+        <Button size="large" type="link">
+          Reset
+        </Button>
+        <Button size="large" type="primary">
+          Save
+        </Button>
+      </Row>
+    </StyledContainer>
   );
 }
+
+const StyledContainer = styled.div`
+  padding: 1em 2em;
+`;
 
 export default App;
